@@ -3,91 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan & Ivena - 01.05.2026</title>
+    <title>Juan & Ivena Wedding - 01.05.2026</title>
     
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-content">
-            <div class="loading-rings">
-                <div class="ring"></div>
-                <div class="ring"></div>
-                <div class="ring"></div>
-            </div>
-            <h2 class="loading-text">Juan & Ivena</h2>
-        </div>
-    </div>
-
-    <!-- Music Player -->
+    <!-- Music Player (Floating Button) -->
     <div class="music-player" id="musicPlayer">
         <div class="music-icon">
             <i class="fas fa-music"></i>
         </div>
-        <span class="music-text">Click to Play Music</span>
+        <span class="music-text">Play Music</span>
     </div>
     <audio id="backgroundMusic" loop>
         <source src="audio/background-music.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">J & I</div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#couple" class="nav-link">Couple</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#event" class="nav-link">Event</a></li>
-                <li><a href="#rsvp" class="nav-link">RSVP</a></li>
-            </ul>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- 1. HERO SECTION -->
+    <section class="hero">
         <div class="hero-background">
-            <!-- Ganti dengan foto pre-wedding favorit Anda -->
-            <img src="images/prewedding/hero.jpg" alt="Juan & Ivena" class="hero-img">
+            <!-- Ganti dengan foto pre-wedding terbaik Anda -->
+            <img src="images/prewedding/hero.jpg" alt="Juan & Ivena">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
-                <p class="hero-subtitle">The Wedding of</p>
-                <h1 class="hero-title">Juan & Ivena</h1>
-                <div class="hero-divider">
-                    <span class="divider-icon">❦</span>
-                </div>
-                <p class="hero-date">01 • 05 • 2026</p>
+            <p class="hero-subtitle">The Wedding of</p>
+            <h1 class="hero-title">Juan & Ivena</h1>
+            <div class="hero-divider">
+                <span class="divider-icon">❦</span>
             </div>
-            <div class="scroll-down" data-aos="fade-up" data-aos-delay="1000">
+            <p class="hero-date">01 • 05 • 2026</p>
+            <div class="scroll-down">
                 <span>Scroll Down</span>
                 <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </section>
 
-    <!-- Opening Section -->
-    <section class="opening" data-aos="fade-up">
+    <!-- 2. OPENING -->
+    <section class="opening">
         <div class="container">
             <div class="opening-content">
                 <div class="opening-icon">
@@ -95,29 +57,29 @@
                 </div>
                 <h2 class="opening-title">Dengan Memohon Rahmat dan Ridho Allah SWT</h2>
                 <p class="opening-text">
-                    Kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami
+                    Kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami yang akan diselenggarakan pada:
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Couple Section -->
-    <section class="couple" id="couple">
+    <!-- 3. COUPLE INFO -->
+    <section class="couple">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header">
                 <h2>Mempelai</h2>
                 <p>Dua hati yang bersatu dalam cinta dan komitmen</p>
             </div>
             
             <div class="couple-container">
                 <!-- Groom -->
-                <div class="couple-card" data-aos="fade-right" data-aos-duration="1000">
+                <div class="couple-card">
                     <div class="couple-image">
-                        <img src="images/prewedding/groom.jpg" alt="Juan Andrianto Tejoprayitno">
+                        <img src="images/prewedding/groom.jpg" alt="Juan">
                         <div class="couple-image-overlay"></div>
                     </div>
                     <div class="couple-info">
-                        <h3 class="couple-name">Juan Andrianto Tejoprayitno</h3>
+                        <h3 class="couple-name">Juan Andrianto<br>Tejoprayitno</h3>
                         <p class="couple-title">Mempelai Pria</p>
                         <div class="couple-divider"></div>
                         <p class="couple-parents">Putra dari:</p>
@@ -126,21 +88,18 @@
                         <p class="parent-and">&</p>
                         <p class="parent-name">Ibu Yohana Sherly Ingga Utomo</p>
                         <p class="parent-chinese">(Lie Ing)</p>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        </div>
                     </div>
                 </div>
 
                 <!-- Ampersand -->
-                <div class="couple-ampersand" data-aos="zoom-in" data-aos-delay="500">
+                <div class="couple-ampersand">
                     <span>&</span>
                 </div>
 
                 <!-- Bride -->
-                <div class="couple-card" data-aos="fade-left" data-aos-duration="1000">
+                <div class="couple-card">
                     <div class="couple-image">
-                        <img src="images/prewedding/bride.jpg" alt="Ivena Eunike">
+                        <img src="images/prewedding/bride.jpg" alt="Ivena">
                         <div class="couple-image-overlay"></div>
                     </div>
                     <div class="couple-info">
@@ -149,103 +108,98 @@
                         <div class="couple-divider"></div>
                         <p class="couple-parents">Putri dari:</p>
                         <p class="parent-name">Ibu Eminda Irwanto</p>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-        <div class="container-fluid">
-            <div class="section-header" data-aos="fade-up">
+    <!-- 4. PHOTO GALLERY -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-header">
                 <h2>Our Gallery</h2>
                 <p>Beberapa momen indah kami bersama</p>
             </div>
 
             <div class="gallery-grid">
-                <div class="gallery-item gallery-large" data-aos="fade-up" data-aos-delay="100">
+                <div class="gallery-item gallery-large">
                     <img src="images/prewedding/photo1.jpg" alt="Gallery 1">
                     <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                 </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="gallery-item">
                     <img src="images/prewedding/photo2.jpg" alt="Gallery 2">
                     <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                 </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="gallery-item">
                     <img src="images/prewedding/photo3.jpg" alt="Gallery 3">
                     <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                 </div>
-                <div class="gallery-item gallery-tall" data-aos="fade-up" data-aos-delay="400">
+                <div class="gallery-item gallery-tall">
                     <img src="images/prewedding/photo4.jpg" alt="Gallery 4">
                     <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                 </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="gallery-item">
                     <img src="images/prewedding/photo5.jpg" alt="Gallery 5">
                     <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                 </div>
-                <div class="gallery-item gallery-wide" data-aos="fade-up" data-aos-delay="600">
+                <div class="gallery-item gallery-wide">
                     <img src="images/prewedding/photo6.jpg" alt="Gallery 6">
                     <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Event Section -->
-    <section class="event" id="event">
+    <!-- 5. EVENT DETAILS -->
+    <section class="event">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header">
                 <h2>Acara</h2>
                 <p>Waktu dan tempat pernikahan kami</p>
             </div>
 
-            <div class="event-container">
-                <div class="event-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="event-icon">
-                        <i class="fas fa-ring"></i>
-                    </div>
-                    <h3 class="event-title">Resepsi Pernikahan</h3>
-                    <div class="event-details">
-                        <div class="event-detail-item">
-                            <i class="far fa-calendar-alt"></i>
-                            <span>Kamis, 1 Mei 2026</span>
-                        </div>
-                        <div class="event-detail-item">
-                            <i class="far fa-clock"></i>
-                            <span>18:00 WIB - Selesai</span>
-                        </div>
-                        <div class="event-detail-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Hotel Mercure Grand Mirama Surabaya</span>
-                        </div>
-                    </div>
-                    <a href="https://maps.app.goo.gl/P8yQefwRMwKonsArV" target="_blank" class="btn-primary">
-                        <i class="fas fa-map-marked-alt"></i>
-                        Lihat Lokasi
-                    </a>
+            <div class="event-card">
+                <div class="event-icon">
+                    <i class="fas fa-rings-wedding"></i>
                 </div>
+                <h3 class="event-title">Resepsi Pernikahan</h3>
+                <div class="event-details">
+                    <div class="event-detail-item">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>Kamis, 1 Mei 2026</span>
+                    </div>
+                    <div class="event-detail-item">
+                        <i class="far fa-clock"></i>
+                        <span>18:00 WIB - Selesai</span>
+                    </div>
+                    <div class="event-detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Hotel Mercure Grand Mirama Surabaya</span>
+                    </div>
+                </div>
+                <a href="https://maps.app.goo.gl/P8yQefwRMwKonsArV" target="_blank" class="btn-primary">
+                    <i class="fas fa-map-marked-alt"></i>
+                    Lihat Lokasi
+                </a>
             </div>
 
-            <!-- Countdown Timer -->
-            <div class="countdown-section" data-aos="fade-up" data-aos-delay="400">
+            <!-- Countdown -->
+            <div class="countdown-section">
                 <h3 class="countdown-title">Menghitung Hari</h3>
-                <div class="countdown" id="countdown">
+                <div class="countdown">
                     <div class="countdown-item">
                         <span class="countdown-value" id="days">00</span>
                         <span class="countdown-label">Hari</span>
@@ -267,25 +221,29 @@
         </div>
     </section>
 
-    <!-- RSVP Section -->
-    <section class="rsvp" id="rsvp">
+    <!-- 6. RSVP -->
+    <section class="rsvp">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>RSVP</h2>
+            <div class="section-header">
+                <h2>RSVP & Ucapan</h2>
                 <p>Mohon konfirmasi kehadiran Anda</p>
             </div>
 
             <div class="rsvp-container">
-                <!-- RSVP Form -->
-                <div class="rsvp-form-container" data-aos="fade-right">
+                <!-- Form -->
+                <div class="rsvp-form-wrapper">
                     <form id="rsvpForm" class="rsvp-form">
                         <div class="form-group">
-                            <label for="nama"><i class="fas fa-user"></i> Nama Lengkap</label>
+                            <label for="nama">
+                                <i class="fas fa-user"></i> Nama Lengkap
+                            </label>
                             <input type="text" id="nama" name="nama" required placeholder="Masukkan nama Anda">
                         </div>
                         
                         <div class="form-group">
-                            <label for="jumlah"><i class="fas fa-users"></i> Jumlah Tamu</label>
+                            <label for="jumlah">
+                                <i class="fas fa-users"></i> Jumlah Tamu
+                            </label>
                             <select id="jumlah" name="jumlah" required>
                                 <option value="">Pilih jumlah</option>
                                 <option value="1">1 Orang</option>
@@ -297,5 +255,19 @@
                         </div>
                         
                         <div class="form-group">
-                            <label><i class="fas fa-check-circle"></i> Status Kehadiran</label>
-                            <div class="radio-
+                            <label>
+                                <i class="fas fa-check-circle"></i> Status Kehadiran
+                            </label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="status" value="Hadir" required>
+                                    <span>Hadir</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="status" value="Tidak Hadir" required>
+                                    <span>Tidak Hadir</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div
