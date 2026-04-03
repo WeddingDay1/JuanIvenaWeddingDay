@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan & Ivena Wedding - 01.05.2026</title>
+    <title>Juan & Ivena Wedding</title>
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,258 +16,249 @@
 </head>
 <body>
 
-    <!-- Music Player (Floating Button) -->
-    <div class="music-player" id="musicPlayer">
-        <div class="music-icon">
-            <i class="fas fa-music"></i>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Juan & Ivena</div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#rsvp" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#rsvp" class="rsvp-btn">RSVP Now</a>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <span class="music-text">Play Music</span>
-    </div>
-    <audio id="backgroundMusic" loop>
-        <source src="audio/background-music.mp3" type="audio/mpeg">
-    </audio>
+    </nav>
 
-    <!-- 1. HERO SECTION -->
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background">
-            <!-- Ganti dengan foto pre-wedding terbaik Anda -->
-            <img src="images/prewedding/hero.jpg" alt="Juan & Ivena">
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="hero-content">
-            <p class="hero-subtitle">The Wedding of</p>
-            <h1 class="hero-title">Juan & Ivena</h1>
-            <div class="hero-divider">
-                <span class="divider-icon">❦</span>
-            </div>
-            <p class="hero-date">01 • 05 • 2026</p>
-            <div class="scroll-down">
-                <span>Scroll Down</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
+        <div class="hero-container">
+            <h1 class="hero-title">LOVE IS IN<br>THE AIR</h1>
+            <p class="hero-subtitle">Creating Memories Together Forever</p>
+            <a href="#invitation" class="hero-btn">View Invitation</a>
         </div>
     </section>
 
-    <!-- 2. OPENING -->
-    <section class="opening">
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-            <div class="opening-content">
-                <div class="opening-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <h2 class="opening-title">Dengan Memohon Rahmat dan Ridho Allah SWT</h2>
-                <p class="opening-text">
-                    Kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami yang akan diselenggarakan pada:
+            <div class="about-content">
+                <h2 class="section-title">Our Story</h2>
+                <p class="about-text">
+                    Dengan penuh rasa syukur kepada Allah SWT, kami bermaksud mengundang 
+                    Bapak/Ibu/Saudara/i untuk hadir dalam acara pernikahan kami yang akan 
+                    diselenggarakan pada:
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- 3. COUPLE INFO -->
-    <section class="couple">
+    <!-- Couple Section -->
+    <section class="couple" id="couple">
         <div class="container">
-            <div class="section-header">
-                <h2>Mempelai</h2>
-                <p>Dua hati yang bersatu dalam cinta dan komitmen</p>
-            </div>
-            
-            <div class="couple-container">
+            <div class="couple-grid">
                 <!-- Groom -->
                 <div class="couple-card">
-                    <div class="couple-image">
-                        <img src="images/prewedding/groom.jpg" alt="Juan">
-                        <div class="couple-image-overlay"></div>
+                    <div class="couple-photo">
+                        <img src="images/prewedding/groom.jpg" alt="Juan Andrianto Tejoprayitno">
                     </div>
                     <div class="couple-info">
                         <h3 class="couple-name">Juan Andrianto<br>Tejoprayitno</h3>
-                        <p class="couple-title">Mempelai Pria</p>
-                        <div class="couple-divider"></div>
-                        <p class="couple-parents">Putra dari:</p>
-                        <p class="parent-name">Bapak Juanto Tejorayitno</p>
-                        <p class="parent-chinese">(The Yoe Tjwan)</p>
-                        <p class="parent-and">&</p>
-                        <p class="parent-name">Ibu Yohana Sherly Ingga Utomo</p>
-                        <p class="parent-chinese">(Lie Ing)</p>
+                        <p class="couple-role">The Groom</p>
+                        <div class="parents-info">
+                            <p class="parents-label">Son of</p>
+                            <p class="parent-name">Juanto Tejorayitno (The Yoe Tjwan)</p>
+                            <p class="parent-name">Yohana Sherly Ingga Utomo (Lie Ing)</p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Ampersand -->
-                <div class="couple-ampersand">
-                    <span>&</span>
                 </div>
 
                 <!-- Bride -->
                 <div class="couple-card">
-                    <div class="couple-image">
-                        <img src="images/prewedding/bride.jpg" alt="Ivena">
-                        <div class="couple-image-overlay"></div>
+                    <div class="couple-photo">
+                        <img src="images/prewedding/bride.jpg" alt="Ivena Eunike">
                     </div>
                     <div class="couple-info">
                         <h3 class="couple-name">Ivena Eunike</h3>
-                        <p class="couple-title">Mempelai Wanita</p>
-                        <div class="couple-divider"></div>
-                        <p class="couple-parents">Putri dari:</p>
-                        <p class="parent-name">Ibu Eminda Irwanto</p>
+                        <p class="couple-role">The Bride</p>
+                        <div class="parents-info">
+                            <p class="parents-label">Daughter of</p>
+                            <p class="parent-name">Eminda Irwanto</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. PHOTO GALLERY -->
-    <section class="gallery">
+    <!-- Events Section -->
+    <section class="events" id="events">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Gallery</h2>
-                <p>Beberapa momen indah kami bersama</p>
-            </div>
-
-            <div class="gallery-grid">
-                <div class="gallery-item gallery-large">
-                    <img src="images/prewedding/photo1.jpg" alt="Gallery 1">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/prewedding/photo2.jpg" alt="Gallery 2">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/prewedding/photo3.jpg" alt="Gallery 3">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-                <div class="gallery-item gallery-tall">
-                    <img src="images/prewedding/photo4.jpg" alt="Gallery 4">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/prewedding/photo5.jpg" alt="Gallery 5">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-                <div class="gallery-item gallery-wide">
-                    <img src="images/prewedding/photo6.jpg" alt="Gallery 6">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. EVENT DETAILS -->
-    <section class="event">
-        <div class="container">
-            <div class="section-header">
-                <h2>Acara</h2>
-                <p>Waktu dan tempat pernikahan kami</p>
-            </div>
-
+            <h2 class="section-title">Wedding Events</h2>
+            
             <div class="event-card">
                 <div class="event-icon">
                     <i class="fas fa-rings-wedding"></i>
                 </div>
-                <h3 class="event-title">Resepsi Pernikahan</h3>
+                <h3 class="event-title">Wedding Reception</h3>
                 <div class="event-details">
-                    <div class="event-detail-item">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>Kamis, 1 Mei 2026</span>
+                    <div class="event-item">
+                        <i class="far fa-calendar"></i>
+                        <span>Thursday, May 1st, 2026</span>
                     </div>
-                    <div class="event-detail-item">
+                    <div class="event-item">
                         <i class="far fa-clock"></i>
-                        <span>18:00 WIB - Selesai</span>
+                        <span>6:00 PM - End</span>
                     </div>
-                    <div class="event-detail-item">
+                    <div class="event-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Hotel Mercure Grand Mirama Surabaya</span>
                     </div>
                 </div>
-                <a href="https://maps.app.goo.gl/P8yQefwRMwKonsArV" target="_blank" class="btn-primary">
-                    <i class="fas fa-map-marked-alt"></i>
-                    Lihat Lokasi
+                <a href="https://maps.app.goo.gl/P8yQefwRMwKonsArV" target="_blank" class="location-btn">
+                    <i class="fas fa-directions"></i> View Location
                 </a>
             </div>
 
             <!-- Countdown -->
             <div class="countdown-section">
-                <h3 class="countdown-title">Menghitung Hari</h3>
+                <h3 class="countdown-title">Counting Down to Our Big Day</h3>
                 <div class="countdown">
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="days">00</span>
-                        <span class="countdown-label">Hari</span>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">Days</span>
                     </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="hours">00</span>
-                        <span class="countdown-label">Jam</span>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
                     </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="minutes">00</span>
-                        <span class="countdown-label">Menit</span>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
                     </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="seconds">00</span>
-                        <span class="countdown-label">Detik</span>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. RSVP -->
-    <section class="rsvp">
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
         <div class="container">
-            <div class="section-header">
-                <h2>RSVP & Ucapan</h2>
-                <p>Mohon konfirmasi kehadiran Anda</p>
+            <h2 class="section-title">Our Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/prewedding/photo1.jpg" alt="Gallery 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/prewedding/photo2.jpg" alt="Gallery 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/prewedding/photo3.jpg" alt="Gallery 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/prewedding/photo4.jpg" alt="Gallery 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/prewedding/photo5.jpg" alt="Gallery 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/prewedding/photo6.jpg" alt="Gallery 6">
+                </div>
             </div>
+        </div>
+    </section>
 
+    <!-- RSVP Section -->
+    <section class="rsvp" id="rsvp">
+        <div class="container">
+            <h2 class="section-title">RSVP</h2>
+            <p class="rsvp-subtitle">Please confirm your attendance</p>
+            
             <div class="rsvp-container">
-                <!-- Form -->
-                <div class="rsvp-form-wrapper">
-                    <form id="rsvpForm" class="rsvp-form">
+                <form id="rsvpForm" class="rsvp-form">
+                    <div class="form-row">
                         <div class="form-group">
-                            <label for="nama">
-                                <i class="fas fa-user"></i> Nama Lengkap
-                            </label>
-                            <input type="text" id="nama" name="nama" required placeholder="Masukkan nama Anda">
+                            <label for="nama">Full Name</label>
+                            <input type="text" id="nama" name="nama" required>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="jumlah">
-                                <i class="fas fa-users"></i> Jumlah Tamu
-                            </label>
+                            <label for="jumlah">Number of Guests</label>
                             <select id="jumlah" name="jumlah" required>
-                                <option value="">Pilih jumlah</option>
-                                <option value="1">1 Orang</option>
-                                <option value="2">2 Orang</option>
-                                <option value="3">3 Orang</option>
-                                <option value="4">4 Orang</option>
-                                <option value="5">5+ Orang</option>
+                                <option value="">Select</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5+ People</option>
                             </select>
                         </div>
-                        
-                        <div class="form-group">
-                            <label>
-                                <i class="fas fa-check-circle"></i> Status Kehadiran
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Attendance Status</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="status" value="Hadir" required>
+                                <span class="radio-custom"></span>
+                                Will Attend
                             </label>
-                            <div class="radio-group">
-                                <label class="radio-label">
-                                    <input type="radio" name="status" value="Hadir" required>
-                                    <span>Hadir</span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="status" value="Tidak Hadir" required>
-                                    <span>Tidak Hadir</span>
-                                </label>
-                            </div>
+                            <label class="radio-option">
+                                <input type="radio" name="status" value="Tidak Hadir" required>
+                                <span class="radio-custom"></span>
+                                Cannot Attend
+                            </label>
                         </div>
-                        
-                        <div
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ucapan">Message & Wishes</label>
+                        <textarea id="ucapan" name="ucapan" rows="4" placeholder="Write your message and wishes for us..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Send RSVP
+                    </button>
+                </form>
+
+                <!-- Messages Display -->
+                <div class="messages-section">
+                    <h3 class="messages-title">Messages & Wishes</h3>
+                    <div id="messagesList" class="messages-list">
+                        <!-- Messages will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">Thank you for being part of our special day</p>
+            <h3 class="footer-names">Juan & Ivena</h3>
+            <p class="footer-date">May 1st, 2026</p>
+        </div>
+    </footer>
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <i class="fas fa-music"></i>
+    </div>
+    <audio id="backgroundMusic" loop>
+        <source src="audio/background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
