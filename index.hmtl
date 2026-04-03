@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Juan & Ivena</title>
+    
+    <!-- Google Fonts: Playfair Display (Serif Mewah) & Montserrat (Modern) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark: #2c2c2c;
+            --light-bg: #fdfdfd;
+            --text-muted: #757575;
+        }
+
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--light-bg); color: var(--dark); overflow-x: hidden; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80'); /* GANTI DENGAN FOTO UTAMA ANDA */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero-content { border: 1px solid rgba(255,255,255,0.5); padding: 50px 30px; backdrop-filter: blur(2px); }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; letter-spacing: 3px; }
+        .hero p { font-size: 1.1re
