@@ -132,4 +132,119 @@
     <section class="container section-padding">
         <div class="row g-5">
             <!-- RSVP Form -->
-            <div class="col-md-6 tex
+            <div class="col-md-6 text-center">
+                <div class="rsvp-container">
+                    <h2 class="serif">RSVP</h2>
+                    <p class="text-muted mb-5">Silakan konfirmasi kehadiran Anda</p>
+                    <form id="rsvpForm">
+                        <div class="mb-4 text-start">
+                            <label class="small text-muted">Nama Lengkap</label>
+                            <input type="text" id="nama" class="form-control" required>
+                        </div>
+                        <div class="mb-4 text-start">
+                            <label class="small text-muted">Jumlah Tamu</label>
+                            <select id="jumlah" class="form-select" required>
+                                <option value="1">1 Orang</option>
+                                <option value="2">2 Orang</option>
+                            </select>
+                        </div>
+                        <div class="mb-4 text-start">
+                            <label class="small text-muted">Konfirmasi Kehadiran</label>
+                            <select id="status" class="form-select" required>
+                                <option value="Hadir">Saya Akan Hadir</option>
+                                <option value="Tidak Hadir">Maaf, Tidak Bisa Hadir</option>
+                            </select>
+                        </div>
+                        <div class="mb-5 text-start">
+                            <label class="small text-muted">Ucapan Selamat</label>
+                            <textarea id="ucapan" class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" id="submitBtn" class="btn btn-gold w-100">Kirim Konfirmasi</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Wishes Display -->
+            <div class="col-md-6 text-center">
+                <h2 class="serif">Wishes</h2>
+                <p class="text-muted mb-5">Doa & Harapan dari Teman & Keluarga</p>
+                <div id="commentContainer" style="max-height: 500px; overflow-y: auto; padding: 10px;">
+                    <p>Memuat ucapan...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-padding text-center">
+        <p class="serif" style="font-size: 1.5rem;">J & I</p>
+        <p class="small text-muted">Created for Juan & Ivena</p>
+    </footer>
+
+    <script>
+        // GANTI INI DENGAN URL WEB APP ANDA DARI GOOGLE APPS SCRIPT
+        const scriptURL = 'SALIN_URL_WEB_APP_ANDA_DISINI'; 
+
+        // Fungsi Load Ucapan
+        async function loadComments() {
+            try {
+                const response = await fetch(scriptURL);
+                const data = await response.json();
+                const container = document.getElementById('commentContainer');
+                container.innerHTML = '';
+                
+                // Menampilkan hanya jika ada nama dan ucapan
+                data.reverse().forEach(row => {
+                    if(row[1] && row[4]) {
+                        container.innerHTML += `
+                            <div class="wish-item">
+                                <div class="wish-name">${row[1]}</div>
+                                <div class="wish-text">"${row[4]}"</div>
+                            </div>`;
+                    }
+                });
+            } catch (e) {
+                document.getElementById('commentContainer').innerHTML = "<p>Gagal memuat ucapan.</p>";
+            }
+        }
+
+        // Handle RSVP Form
+        document.getElementById('rsvpForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerText = "Mengirim...";
+
+            const body = {
+                nama: document.getElementById('nama').value,
+                jumlah: document.getElementById('jumlah').value,
+                status: document.getElementById('status').value,
+                ucapan: document.getElementById('ucapan').value
+            };
+
+            try {
+                const response = await fetch(scriptURL, {
+                    method: 'POST',
+                    body: JSON.stringify(body)
+                });
+                const result = await response.json();
+                
+                if (result.result === "success") {
+                    alert("Terima kasih! Konfirmasi Anda telah kami terima.");
+                    document.getElementById('rsvpForm').reset();
+                    loadComments();
+                } else {
+                    alert(result.message); // Menampilkan pesan error jika nama double
+                }
+            } catch (e) {
+                alert("Terjadi kesalahan teknis.");
+            } finally {
+                btn.disabled = false;
+                btn.innerText = "Kirim Konfirmasi";
+            }
+        });
+
+        window.onload = loadComments;
+    </script>
+</body>
+</html>
